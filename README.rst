@@ -1,23 +1,20 @@
 DebMonitor - Debian packages tracker
 ------------------------------------
 
-DebMonitor is a Django-based web application that allows to track Debian packages installed across a fleet of hosts,
-along with their pending software/security updates.
+DebMonitor is a Django-based web application that allows tracking Debian packages installed across a fleet of hosts, along with their pending software/security updates.
 
-It provides also a standalone command line script (CLI) that, when distributed in the target hosts, allows to
-automatically update DebMonitor's database using APT and DPKG hooks.
-
+It also provides a standalone command-line script (CLI) that, when distributed in the target hosts, allows to automatically update DebMonitor's database using `APT <https://en.wikipedia.org/wiki/APT_(software)>`_ and `DPKG <https://en.wikipedia.org/wiki/Dpkg>`_ hooks.
 
 Target configuration
 ^^^^^^^^^^^^^^^^^^^^
 
 To automate the tracking of the packages in the target hosts, follow these steps:
 
-* Deploy the standlone CLI script provided in ``utils/cli.py`` across the fleet, for example into
+* Deploy the standalone CLI script provided in ``utils/cli.py`` across the fleet, for example into
   ``/usr/local/bin/debmonitor``, and make it executable, optionally modifying the shebang to force a specific Python
   version. The script can also be downloaded directly from a DebMonitor server via its ``/client`` endpoint.
 * Optionally add a configuration file in ``/etc/debmonitor.conf`` (or in a different one passing the
-  ``--config /path/to/config`` CLI argument) to avoid to pass the common options to the CLI. See the example file in
+  ``--config /path/to/config`` CLI argument) to avoid passing the common options to the CLI. Refer to the example file in
   ``doc/examples/client.conf``.
 * Add a configuration file in ``/etc/apt/apt.conf.d/`` with the following content, assuming that the ``server`` option
   was set in the configuration file.
