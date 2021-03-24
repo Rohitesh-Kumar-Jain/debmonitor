@@ -1,0 +1,19 @@
+   /**
+	 * Builds a Pattern and returns it
+	 * @throws SpoonException if the patter has been built already
+	 * @return the built patter
+	 */
+   
+   /**
+	 * writes as many newlines as needed for the current line to match the end line of the passed element
+	 * @param e is a CtElement whose line number will be preserved by adding newlines
+	 * @return PrinterHelper
+	 */
+   
+   
+   
+   
+   /**
+	 * @param method is the Method which is to be wrapped in a RtMethod
+	 * @return an object of RtMethod after calling the parameterized constructor of the RtMethod class
+	 */
